@@ -12,8 +12,8 @@ public class Main {
     int turtleCount = 0;
     System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
 
-    //testing coin flip
-
+    // testing coin flip
+    flipNHeads(4);
   }
 
   public static String pluralize(String word, int num) {
@@ -21,26 +21,32 @@ public class Main {
     String result2 = word + "s";
     if (num >= 2) {
       return result2;
-    } else if (num == 0){
+    } else if (num == 0) {
       return result2;
     } else {
       return result1;
     }
   }
 
-  // public static String flipNHeads(int n){
-  //   int x = (Math.random() * ((1 - 0) + 1)) + 0;
+  public static String flipNHeads(int n) {
 
-  //   if (x >= .5){
-  //     String result = heads;
-  //   } else if (x < .5){
-  //     String result = tails;
-  //   }
-    
+    int flips = 0;
 
+    while (flips < n) {
+      double x = Math.random();
 
-  //   String output = "It took " + times + " flip to flip " + n + " heads in a row.";
-  //   return output;
-  // }
+      if (x >= .5) {
+        System.out.println("heads");
+        flips++;
+      } else if (x < .5) {
+        System.out.println("tails");
+      }
+
+    }
+
+    String output = "It took " + flips + " flips to flip " + n + " heads in a row.";
+    System.out.println(output);
+    return output;
+  }
 
 }
