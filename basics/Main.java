@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 
 public class Main {
   public static void main(String[] args) {
@@ -14,6 +15,11 @@ public class Main {
 
     // testing coin flip
     flipNHeads(4);
+
+    //testing clock
+    while(true){
+      clock();
+    }
   }
 
   public static String pluralize(String word, int num) {
@@ -47,6 +53,16 @@ public class Main {
     String output = "It took " + flips + " flips to flip " + n + " heads in a row.";
     System.out.println(output);
     return output;
+  }
+
+  public static String clock() {
+    LocalDateTime now = LocalDateTime.now();
+    int hour = now.getHour();
+    int minute = now.getMinute();
+    int second = now.getSecond();
+    String time = hour + ":" + minute + ":" + second;
+    System.out.println(time);
+    return time;
   }
 
 }
