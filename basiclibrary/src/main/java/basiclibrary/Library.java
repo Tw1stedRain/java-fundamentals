@@ -9,11 +9,21 @@ public class Library {
     public static void main(String[] args) {
 
         int[] array1 = {2, 4, 6, 8};
-
+        int[] array2 = {1, 3, 6, 7, 2, 1};
+        int[] array3 = {2, 2, 4, 5, 6, 9};
+        //testing roll:
+        roll(7);
+        roll(13);
         roll(5);
-//        containsDuplicats();
+
+        // testing duplicates:
+        containsDuplicates(array1);
+        containsDuplicates(array2);
+        containsDuplicates(array3);
+
 //        averages(array1);
     }
+
     public static long[] roll(int n){
 
         long[] rollCount = new long[n];
@@ -28,9 +38,20 @@ public class Library {
         return rollCount;
     }
 
-//    public static boolean containsDuplicats(int[] arr){
-//
-//    };
+    public static boolean containsDuplicates(int[] arr){
+
+        Arrays.sort(arr);
+
+        for (int i = 0; i < arr.length -1; i++){
+            if (arr[i] == arr[i +1]){
+                System.out.println("true");
+                return true;
+            }
+        }
+        System.out.println("false");
+        return false;
+
+    };
 //
 //    public static int averages(int[] arr){
 //
