@@ -8,9 +8,10 @@ import java.util.Arrays;
 public class Library {
     public static void main(String[] args) {
 
-        int[] array1 = {2, 4, 6, 8};
-        int[] array2 = {1, 3, 6, 7, 2, 1};
-        int[] array3 = {2, 2, 4, 5, 6, 9};
+        int[] array1 = {2, 4, 6, 8}; // total: 20 avg: 5
+        int[] array2 = {1, 3, 6, 7, 2, 1}; // total: 20 avg: 3.33
+        int[] array3 = {2, 2, 4, 5, 6, 9}; // total: 28 avg: 4.66
+
         //testing roll:
         roll(7);
         roll(13);
@@ -21,7 +22,11 @@ public class Library {
         containsDuplicates(array2);
         containsDuplicates(array3);
 
-//        averages(array1);
+        // testing averages
+        averages(array1);
+        averages(array2);
+        averages(array3);
+
     }
 
     public static long[] roll(int n){
@@ -52,10 +57,20 @@ public class Library {
         return false;
 
     };
-//
-//    public static int averages(int[] arr){
-//
-//    };
+
+    public static int averages(int[] arr){
+
+        int total = 0;
+        int avg;
+
+        for(int i = 0; i < arr.length; i++){
+            total = total + arr[i];
+        }
+        avg = total / arr.length;
+
+        System.out.println(avg);
+        return avg;
+    }
 
 
 }
