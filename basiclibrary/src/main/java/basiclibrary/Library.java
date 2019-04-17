@@ -8,24 +8,48 @@ import java.util.Arrays;
 public class Library {
     public static void main(String[] args) {
 
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+        int[][] weeklyMonthTemperatures1 = {
+                {66, 64, 58, 652, 71, 57, 60},
+                {57, 635, 65, 705, 72, 635, 51},
+                {55, 54, 60, 513, 59, 57, 621},
+                {65, 456, 585, 522, 55, 62, 517}
+        };
+        int[][] weeklyMonthTemperatures2 = {
+                {664, 614, 73, 65, 54, 57, 60},
+                {107, 25, 65, 90, 72, 65, 51},
+                {55, 54, 60, 153, 59, 547, 661},
+                {65, 56, 55, 512, 555, 262, 557}
+        };
         int[] array1 = {2, 4, 6, 8}; // total: 20 avg: 5
         int[] array2 = {1, 3, 6, 7, 2, 1}; // total: 20 avg: 3.33
         int[] array3 = {2, 2, 4, 5, 6, 9}; // total: 28 avg: 4.66
 
         //testing roll:
-        roll(7);
-        roll(13);
-        roll(5);
+//        roll(7);
+//        roll(13);
+//        roll(5);
+//
+//        // testing duplicates:
+//        containsDuplicates(array1);
+//        containsDuplicates(array2);
+//        containsDuplicates(array3);
+//
+//        // testing averages
+//        averages(array1);
+//        averages(array2);
+//        averages(array3);
 
-        // testing duplicates:
-        containsDuplicates(array1);
-        containsDuplicates(array2);
-        containsDuplicates(array3);
+        //testing big averages
+        bigAverages(weeklyMonthTemperatures);
+        bigAverages(weeklyMonthTemperatures1);
+        bigAverages(weeklyMonthTemperatures2);
 
-        // testing averages
-        averages(array1);
-        averages(array2);
-        averages(array3);
 
     }
 
@@ -72,5 +96,25 @@ public class Library {
         return avg;
     }
 
+    public static int[] bigAverages(int[][] arr){
+
+        int total;
+        int avg;
+        int[] calculator = new int[arr.length];
+        int[] result;
+
+        for (int i = 0; i < arr.length; i++){
+            total = 0;
+            for(int j = 0; j < arr[i].length; j++){
+                total = total + arr[i][j];
+            }
+            avg = total/arr.length;
+
+            calculator[i] = avg;
+        }
+        return calculator;
+
+
+    }
 
 }
