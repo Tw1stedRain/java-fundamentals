@@ -4,6 +4,7 @@
 package basiclibrary;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Library {
     public static void main(String[] args) {
@@ -31,19 +32,19 @@ public class Library {
         int[] array3 = {2, 2, 4, 5, 6, 9}; // total: 28 avg: 4.66
 
         //testing roll:
-//        roll(7);
-//        roll(13);
-//        roll(5);
-//
-//        // testing duplicates:
-//        containsDuplicates(array1);
-//        containsDuplicates(array2);
-//        containsDuplicates(array3);
-//
-//        // testing averages
-//        averages(array1);
-//        averages(array2);
-//        averages(array3);
+        roll(7);
+        roll(13);
+        roll(5);
+
+        // testing duplicates:
+        containsDuplicates(array1);
+        containsDuplicates(array2);
+        containsDuplicates(array3);
+
+        // testing averages
+        averages(array1);
+        averages(array2);
+        averages(array3);
 
         //testing big averages
         bigAverages(weeklyMonthTemperatures);
@@ -53,26 +54,26 @@ public class Library {
 
     }
 
-    public static long[] roll(int n){
+    public static long[] roll(int n) {
 
         long[] rollCount = new long[n];
 
-        for (int i = 0; i < rollCount.length; i++){
+        for (int i = 0; i < rollCount.length; i++) {
 
-        long x = Math.round((Math.random() * ((6 - 1) + 1)) + 1);
-        rollCount[i] = x;
+            long x = Math.round((Math.random() * ((6 - 1) + 1)) + 1);
+            rollCount[i] = x;
 
         }
         System.out.println(Arrays.toString(rollCount));
         return rollCount;
     }
 
-    public static boolean containsDuplicates(int[] arr){
+    public static boolean containsDuplicates(int[] arr) {
 
         Arrays.sort(arr);
 
-        for (int i = 0; i < arr.length -1; i++){
-            if (arr[i] == arr[i +1]){
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] == arr[i + 1]) {
                 System.out.println("true");
                 return true;
             }
@@ -80,14 +81,16 @@ public class Library {
         System.out.println("false");
         return false;
 
-    };
+    }
 
-    public static int averages(int[] arr){
+    ;
+
+    public static int averages(int[] arr) {
 
         int total = 0;
         int avg;
 
-        for(int i = 0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             total = total + arr[i];
         }
         avg = total / arr.length;
@@ -96,19 +99,19 @@ public class Library {
         return avg;
     }
 
-    public static int[] bigAverages(int[][] arr){
+    public static int[] bigAverages(int[][] arr) {
 
         int total;
         int avg;
         int[] calculator = new int[arr.length];
         int[] result;
 
-        for (int i = 0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             total = 0;
-            for(int j = 0; j < arr[i].length; j++){
+            for (int j = 0; j < arr[i].length; j++) {
                 total = total + arr[i][j];
             }
-            avg = total/arr.length;
+            avg = total / arr.length;
 
             calculator[i] = avg;
         }
@@ -116,5 +119,14 @@ public class Library {
 
 
     }
+
+    public static String weatherData(int[][] arr) {
+
+    }
+
+    public static String tally(List myList) {
+
+    }
+
 
 }
