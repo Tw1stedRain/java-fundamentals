@@ -1,16 +1,5 @@
 # java-fundamentals
 
-## Basics
-
-### Pluralize
-this method adds an s to a string if the number contained in the string is 0 or 2+
-
-### Flipping Coins
-This method keeps track of the number of times 'heads' is flipped, once heads has been flipped the given amount of times in the function call, it tells the user how many flipps it toook to achieve
-
-### Clock
-This method uses the machinenes local clock to print out the current time once every second.
-
 ## BasicLibrary
 
 ### Roll
