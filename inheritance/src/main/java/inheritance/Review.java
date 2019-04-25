@@ -1,14 +1,14 @@
 package inheritance;
 
-public class Review {
+public class Review<generic> {
 
-    String author;
-    String title;
-    String body;
-    int stars;
-    Restaurant reviewTarget;
+    public String author;
+    public String title;
+    public String body;
+    public int stars;
+    public generic reviewTarget;
 
-    public Review(String author, String title, String body, int stars, Restaurant reviewTarget) {
+    public Review(String author, String title, String body, int stars, generic reviewTarget) {
         this.author = author;
         this.title = title;
         this.body = body;
@@ -18,7 +18,7 @@ public class Review {
     }
 
     public String toString() {
-        return "Review: " + this.title + " written by " + this.author + ", gives the restaurant it talks about " + this.stars + " stars.";
+        return "Review: " + this.title + " written by " + this.author + ", gives the location it talks about " + this.stars + " stars.";
     }
 }
 
