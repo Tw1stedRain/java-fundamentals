@@ -17,9 +17,9 @@ public class Main {
     flipNHeads(4);
 
     //testing clock
-    while(true){
-      clock();
-    }
+    // while(true){
+    //   clock();
+    // }
   }
 
   public static String pluralize(String word, int num) {
@@ -36,16 +36,20 @@ public class Main {
 
   public static String flipNHeads(int n) {
 
+    int heads = 0;
     int flips = 0;
-
-    while (flips < n) {
+    
+    while (heads < n) {
       double x = Math.random();
 
       if (x >= .5) {
         System.out.println("heads");
         flips++;
+        heads++;
       } else if (x < .5) {
         System.out.println("tails");
+        heads = 0;
+        flips++;
       }
 
     }
@@ -55,14 +59,14 @@ public class Main {
     return output;
   }
 
-  public static String clock() {
-    LocalDateTime now = LocalDateTime.now();
-    int hour = now.getHour();
-    int minute = now.getMinute();
-    int second = now.getSecond();
-    String time = hour + ":" + minute + ":" + second;
-    System.out.println(time);
-    return time;
-  }
+  // public static String clock() {
+  //   LocalDateTime now = LocalDateTime.now();
+  //   int hour = now.getHour();
+  //   int minute = now.getMinute();
+  //   int second = now.getSecond();
+  //   String time = hour + ":" + minute + ":" + second;
+  //   System.out.println(time);
+  //   return time;
+  // }
 
 }
