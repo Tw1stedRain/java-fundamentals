@@ -2,11 +2,11 @@ package inheritance;
 
 public class Review {
 
-    String author;
-    String title;
-    String body;
-    int stars;
-    Restaurant reviewTarget;
+    public String author;
+    public String title;
+    public String body;
+    public int stars;
+    public Restaurant reviewTarget;
 
     public Review(String author, String title, String body, int stars, Restaurant reviewTarget) {
         this.author = author;
